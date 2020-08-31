@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Article{% endblock %}
+
+{% block body %}
+<h1>Ajouter un article</h1>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button class="btn btn warning">{{ button_label|default('Publier') }}</button>
+{{ form_end(form) }}
+
+
+{% endblock %}

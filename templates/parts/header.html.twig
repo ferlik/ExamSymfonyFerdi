@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon super site !</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        {% if app.user %}
+        <h3 class='text-warning display-2'>Bonjour adhérent </h3>
+        {% else %}
+        <h1 class='text-warning display-2'>Journal le 42 </h1>
+        {% endif %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                {% if app.user %}
+                <li class="nav-item active ml-5">
+                    <a class="nav-link display-4" href="{{ path('app_logout') }}">Se déconnecter <span
+                            class="sr-only">(current)</span></a>
+                </li><br>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link display-4" href=" {{ path('list_articlePro') }}">Gestion des articles</a>
+                </li>
+
+
+                {% else %}
+                <li class="nav-item active ml-5">
+                    <a class="nav-link display-4" href=" {{ path('app_login') }}">Se connecter <span
+                            class="sr-only">(current)</span></a>
+                </li>
+
+
+                <li class="nav-item active ml-5">
+                    <a class="nav-link display-4" href=" {{ path('list_article') }}">Page d'accueil</a>
+                </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+</body>

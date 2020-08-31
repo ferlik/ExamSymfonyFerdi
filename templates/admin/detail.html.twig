@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail{% endblock %}
+
+{% block body %}
+<h1 class='text-center'>Détail de l'article</h1>
+
+<div class='mydiv'>
+
+    <div class="col-12 p-0 card  img-thumbnail bg-danger" style="width: 35rem; margin-left: 32%;">
+
+        <div class="card-body bg-secondary text-center">
+
+            <h1 class="card-title text-dark">Titre: </h2>
+                <h3> {{ article.titre }}</h3><br>
+                <h2 class="card-text text-dark">Photo : </h2>
+                <p><img width="300px" height="auto" src="{{ asset('images/upload/' ~ article.Photo) }}"></p>
+
+                <h4 class="card-text text-dark">Description: </h4>
+                <p> {{ article.description }}</p>
+                <a href="{{ path('article_delete', {'article' : article.id }) }}"
+                    onclick="return confirm('Ton dernier mot ?')">Supprimmer</a>
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<a href="{{ path('list_articlePro') }}">back to list</a>
+
+
+
+
+{% endblock %}
