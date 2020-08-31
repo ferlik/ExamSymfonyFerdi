@@ -18,8 +18,9 @@
 
                 <h4 class="card-text text-dark">Description: </h4>
                 <p> {{ article.description }}</p>
-                <a href="{{ path('article_delete', {'article' : article.id }) }}"
-                    onclick="return confirm('Ton dernier mot ?')">Supprimmer</a>
+                <a class="btn btn-danger" href="{{ path('article_delete', {'article' : article.id }) }}"
+                    onclick="return confirm('Ton dernier mot ?')">Supprimer</a><br><br>
+                <a class="btn btn-warning" href="{{ path('list_articlePro') }}">retour à la liste des articles</a>
 
 
 
@@ -30,7 +31,7 @@
     </div>
 </div>
 
-<a href="{{ path('list_articlePro') }}">back to list</a>
+
 
 
 

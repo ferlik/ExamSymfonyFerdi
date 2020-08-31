@@ -25,23 +25,23 @@
 
                 {% if app.user %}
                 <li class="nav-item active ml-5">
-                    <a class="nav-link display-4" href="{{ path('app_logout') }}">Se déconnecter <span
+                    <a class="nav-link-danger display-4" href="{{ path('app_logout') }}">Se déconnecter <span
                             class="sr-only">(current)</span></a>
                 </li><br>
                 <li class="nav-item active ml-5">
-                    <a class="nav-link display-4" href=" {{ path('list_articlePro') }}">Gestion des articles</a>
+                    <a class="nav-link-danger display-4" href=" {{ path('list_articlePro') }}">Gestion des articles</a>
                 </li>
 
 
                 {% else %}
                 <li class="nav-item active ml-5">
-                    <a class="nav-link display-4" href=" {{ path('app_login') }}">Se connecter <span
+                    <a class="nav-link-danger display-4" href=" {{ path('app_login') }}">Se connecter <span
                             class="sr-only">(current)</span></a>
                 </li>
 
 
                 <li class="nav-item active ml-5">
-                    <a class="nav-link display-4" href=" {{ path('list_article') }}">Page d'accueil</a>
+                    <a class="nav-link-danger display-4" href=" {{ path('list_article') }}">Page d'accueil</a>
                 </li>
                 {% endif %}
 

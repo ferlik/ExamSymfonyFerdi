@@ -17,7 +17,8 @@
                 <p><img width="300px" height="auto" src="{{ asset('images/upload/' ~ article.Photo) }}"></p>
 
                 <h4 class="card-text text-dark">Description: </h4>
-                <p> {{ article.description }}</p>
+                <p> {{ article.description }}</p><br><br>
+                <a class="btn btn-warning" href="{{ path('list_article') }}">Retour à la liste</a>
 
 
 
@@ -27,7 +28,7 @@
 
     </div>
 </div>
-<a href="{{ path('list_article') }}">Retour à la liste</a>
+
 
 
 
